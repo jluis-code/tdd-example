@@ -18,8 +18,20 @@ app.get('/', async (req, res) => {
 })
 
 app.post('/', async (req, res) => {
-   console.log(req.body)
-   res.sendStatus(200);
+   const { data } = await axios.post(urlUsers, req.body);
+   res.send(data);
+})
+
+app.put('/:id', async (req, res) => {
+    const { id } = req.params;
+    const { data } = await axios.put(`${urlUsers}/${id}`, req.body);
+    res.sendStatus(204);
+})
+
+app.delete('/:id', async (req, res) => {
+    const { id } = req.params;
+    await axios.delete(`${urlUsers}/${id}`);
+    res.sendStatus(204);
 })
 
 app.listen(port, () => {
