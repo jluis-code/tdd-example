@@ -1,0 +1,14 @@
+{
+  "name": "test-dd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "jose-luis",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "axios": "^1.5.0",
+    "express": "^4.18.2"
+  }
+}
