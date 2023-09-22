@@ -3,11 +3,11 @@ const urlUsers = 'https://jsonplaceholder.typicode.com/users';
 const handlers = ({ axios }) => ({
     get:  async (req, res) => {
         const { data } = await axios.get(urlUsers);
-        res.send(data);
+        res.status(200).send(data);
     }, 
     post: async (req, res) => {
         const { data } = await axios.post(urlUsers, req.body);
-        res.send(data);
+        res.status(201).send(data);
     }, 
     put: async (req, res) => {
         const { id } = req.params;
