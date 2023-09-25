@@ -9,7 +9,7 @@ const port = 3000
 // create application/json parser
 app.use(bodyParser.json())
 
-const postsHanndler = users({axios})
+const postsHanndler = posts({axios})
 
 app.post('/', authenticate, postsHanndler.post)
 
